@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guncellemeler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        
+body    {
+        font-family: 'Inter','sans-serif';
+        background-color: aliceblue;
+        color:black;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        min-height: 10vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+}
+    .changelog-container{
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 40px;
+        max-width: 700px;
+        width: 100%;
+        box-shadow: 0px 4px 12px black;
+    }
+    .changelog-header {
+        text-align: center;
+        margin-bottom: 40px;
+}
+    .changelog-header h1{
+        margin-bottom: 10px;
+        color: black;
+    }
+    .changelog-header p{
+        color: grey;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .timeline ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    .timeline ul::before{
+        content: '';
+        position: absolute;
+        left: 125px;
+        top: 5px;
+        bottom: 5px;
+        width: 2px;
+        background-color: black;
+    }
+    .timeline li{
+        position: relative;
+        margin-bottom:20px ;
+    }
+    .timeline li::before{
+        content: '';
+        position: absolute;
+        left: 120px; /* Dikey çizgi ile hizalamak için */
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px ;
+        background-color: black;
+        z-index: 1;
+    }
+    .timeline-content{
+        display: flex;
+        align-items: baseline;
+
+    }
+    .timeline-content .date {
+        width: 100px; /* Sabit genişlik */
+        text-align: right;
+        margin-right: 50px; /* Çizgi ile arasında boşluk */
+        color: #888;
+        font-size: 0.9rem;
+    }
+
+    .timeline-content .title {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #222;
+        margin: 0;
+    }
+    .changelog-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #111;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Mobil Cihazlar için Duyarlılık (Responsive) Ayarları */
+@media (max-width: 600px) {
+    .changelog-container {
+        padding: 20px;
+    }
+
+    .timeline ul::before {
+        left: 10px; /* Çizgiyi sola yaklaştır */
+    }
+
+    .timeline li::before {
+        left: 5px; /* Noktaları sola yaklaştır */
+    }
+
+    .timeline-content {
+        flex-direction: column; /* Tarih ve başlığı alt alta getir */
+        align-items: flex-start;
+        margin-left: 35px; /* Çizginin sağına içerik için yer aç */
+    }
+    
+    .timeline-content .date {
+        width: auto;
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 5px; /* Başlık ile arasına boşluk koy */
+        font-size: 0.8rem;
+    }
+    
+    .changelog-header h1 {
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+<body> 
+    <div class="changelog-container">
+        <header class="changelog-header">
+            <h1>Changelog</h1>
+            <p>Here's everything we have shipped in the past few days</p>
+        </header>
+        <div class="timeline">
+            <ul>
+                <li>
+                    <div class="timeline-content">
+                        <p class="date">September 3, 2024</p>
+                        <h3 class="title">Announcing Projects on Frontend Roadmap</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <p class="date">August 25, 2024</p>
+                        <h3 class="title">Git and GitHub Roadmap</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <p class="date">August 22, 2024</p>
+                        <h3 class="title">Submit your project solution and get feedback</h3>
+                    </div>
+                </li>
+                 <li>
+                    <div class="timeline-content">
+                        <p class="date">August 15, 2024</p>
+                        <h3 class="title">Backend Project Ideas</h3>
+                    </div>
+                </li>
+                 <li>
+                    <div class="timeline-content">
+                        <p class="date">August 10, 2024</p>
+                        <h3 class="title">Redis roadmap</h3>
+                    </div>
+                </li>
+                 <li>
+                    <div class="timeline-content">
+                        <p class="date">August 1, 2024</p>
+                        <h3 class="title">Changelog page to help you stay in the loop</h3>
+                    </div>
+                 </li>  
+            </ul>
+        </div>
+
+        <footer class="changelog-footer">
+            <a href="#" class="btn">Visit Complete Changelog</a>
+        </footer>
+    </div>
+</body>
+</html>
